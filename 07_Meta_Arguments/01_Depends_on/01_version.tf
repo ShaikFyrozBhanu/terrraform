@@ -1,14 +1,13 @@
 terraform{
     required_version = "~>1.9.8"
-    required_provider = {
-        aws = {
-            source = "hashicorp/aws"
-            version = ">=6.0.0-beta1"
+    required_providers{                  
+        aws = {                           
+            version = ">=5.87.0"          
+            source = "hashicorp/aws"      
         }
     }
-
 }
 provider "aws"{
-    profile = "default"
+    profile = "fyroz"
     region = "us-east-1"
 }
