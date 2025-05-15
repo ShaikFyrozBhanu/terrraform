@@ -1,3 +1,5 @@
+#####before creating instance we need vpc and subnet so for that scenario we can we depends_on meta argument, but don't use it as regular basis very rare case it is prefered.
+
 resource "aws_instance" "fyroz_instance"{
     availability_zone = "us-east-1a"
     ami = "ami-05b10e08d247fb927"

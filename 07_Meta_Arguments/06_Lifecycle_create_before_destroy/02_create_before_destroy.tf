@@ -24,3 +24,6 @@ resource "aws_instance" "tf-server" {
     create_before_destroy = true
   }
 }
+
+
+### usually when we change availability zone the process will be first it will destroy the current one then create new one right, but by using lifecycle meta argument create_before_destroy here first it will create new one then it ill delete the old one

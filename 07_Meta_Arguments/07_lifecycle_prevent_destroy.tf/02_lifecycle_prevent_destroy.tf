@@ -36,3 +36,9 @@ resource "aws_instance" "tf-server1" {
     Name = "web_server1"
   }
 }
+
+
+#### ususally when we give "terraform destroy" it will destroy all the resources which we created
+#### but in this case hen we give destroy it will give an errror like preventing to destroy "tf-server", soo
+#### it didn't even destroy "tf-server1", so if developer want to delete specific resource while giving this lifecycle meta argument prevent_destroy
+### we need to specify --target flag as (terraform destroy --target aws_instance.tf-server1)
